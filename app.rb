@@ -3,6 +3,7 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
+require 'digest'
 
 
 get "/" do
@@ -16,6 +17,7 @@ end
 
 get "/contacts" do
   @contacts = Contact.all
+  @digest = Digest
   erb :index
 end
 
