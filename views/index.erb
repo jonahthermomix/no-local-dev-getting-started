@@ -9,7 +9,7 @@
 
     <% @contacts.each do |contact| %>
       <tr>
-        <td><%= contact.firstname %></td>
+        <td><%= @digest::SHA1.hexdigest(contact.firstname) %></td>
         <td><%= contact.lastname %></td>
         <td><%= contact.email %></td>
       </tr>
