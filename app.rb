@@ -15,11 +15,11 @@ class Contact < ActiveRecord::Base
   self.table_name = 'salesforce.contact'
 end
 
-get "/contacts" do
-  @contacts = Contact.all
+#get "/contacts" do
+  #@contacts = Contact.all
   #@digest = Digest
-  erb :index
-end
+ #erb :index
+#end
 
 get "/create" do
   dashboard_url = 'https://dashboard.heroku.com/'
